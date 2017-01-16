@@ -1,0 +1,23 @@
+{
+  "name": "FeedBackDemo",
+  "version": "1.0.0",
+  "description": "Bluemix and Watson Feedback demo",
+  "main": "server.js",
+	"scripts": {
+		"start": "node app.js"
+  },
+  "dependencies": {
+		"express": "4.13.x",
+		"cfenv": "1.0.x",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "^4.13.3",
+    "node-env-file": "*",
+    "socket.io": "^1.3.7",
+    "watson-developer-cloud": "^1.8.0"
+	},
+	"repository": {},
+	"engines": {
+		"node": "4.x"
+	} 
+}

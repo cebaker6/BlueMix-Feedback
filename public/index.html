@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Feedback Admin</title>
+    <link rel="icon"       href="../../images/favicon.png">
+
+	<!-- Style sheet files to support app -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-table.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="/socket.io/socket.io.js"></script>
+
+</head>
+
+<body>
+    <!-- Once the document READY event is triggered the loading-wrap div is removed -->
+    <div id='loading_wrap' style='position:fixed; height:100%; width:100%; overflow:hidden; top:0; left:0;'>Loading, please wait.</div>
+
+    <!-- Header bar for page -->
+    <nav class="navbar navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand"><span class="global-header__brand" style="margin-left: 10px;">Feedback Tones</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <br>
+
+    <!-- The table that contains the results -->
+    <div class="container-fluid">
+        <table id="maintable" class="maintable  table borderless" data-toggle="table" data-url="/getAllData" data-cache="false" data-height="">
+            <thead>
+                <tr>
+                    <th class="nameth"     data-field="user"     data-sortable="false">CUSTOMER</th>
+                    <th class="feedbackth" data-field="feedback" data-sortable="false" data-formatter="feedbackFormatter">FEEDBACK</th>
+                    <th class="graphth"    data-field="summary"  data-sortable="false" data-formatter="graphFormatter">TONE SCORES</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <!-- Simple footer to advertise Bluemix -->
+    <footer class="navbar navbar-fixed-bottom bottombar">
+        <div class="container">
+            <p class="text-center">
+            	<a href="http://bluemix.net" target="_blank"><img src="images/Bluemix.svg" /></a>
+                <br>Built using IBM Bluemix
+            </p>
+        </div>
+    </footer>
+
+
+</body>
+
+<!-- Javascript files to support app -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/bootstrap-table.min.js"></script>
+<script src="js/main.js"></script>
+
+</html>
